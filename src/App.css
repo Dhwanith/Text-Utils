@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* button CSS starts from here ⬇ */
+
+.btn {
+  background: #fff;
+  border: 1px solid black;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: #000;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* button CSS ends here !*/
